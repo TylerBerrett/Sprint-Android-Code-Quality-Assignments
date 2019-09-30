@@ -12,3 +12,25 @@ As a recap, the project when working properly should:
 
 - Allow the user to create notes that are saved to a Firebase Database and an on-device persistent store using an SQL database
 - The device's persistent store is synchronized with the Firebase Database. (When a journal entry is saved to the device's persistent store it gets sent to Firebase, and vice-versa.
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+MANIFEST
+Missing activities in manifest.
+add intent filter.
+extra ">" on application in manifest.
+
+XML
+gave correct location of context for edit and main activities.
+add vector drawables for pref_headers
+
+BUILD.GRADLE
+add implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+package name was messed in almost all the files
+
+NoteViewModel added context into parameter on line 23
+
+comment out private set and lines 65-67 in Note.kt
+add getter and setter for Note.kt
