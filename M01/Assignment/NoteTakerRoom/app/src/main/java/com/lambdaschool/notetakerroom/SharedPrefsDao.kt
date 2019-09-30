@@ -1,7 +1,6 @@
-package com.lambdaschool.notetaker
+package com.lambdaschool.notetakerroom
 
-import android.content.SharedPreferences
-import com.lambdaschool.notetaker.SharedPrefsDao.idsString
+import com.lambdaschool.notetaker.MainActivity
 
 import java.util.ArrayList
 

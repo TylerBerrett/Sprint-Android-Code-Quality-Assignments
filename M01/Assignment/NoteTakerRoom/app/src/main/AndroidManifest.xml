@@ -19,7 +19,7 @@
 
         <activity android:name="com.lambdaschool.notetaker.EditActivity"/>
         <activity android:name="com.lambdaschool.notetaker.SettingsActivity"/>
-        <activity android:name="com.lambdaschool.notetaker.AppCompatPreferenceActivity"/>
+        <activity android:name=".AppCompatPreferenceActivity"/>
     </application>
 
 

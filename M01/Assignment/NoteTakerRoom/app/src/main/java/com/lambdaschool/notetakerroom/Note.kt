@@ -1,4 +1,4 @@
-package com.lambdaschool.notetaker
+package com.lambdaschool.notetakerroom
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -16,8 +16,16 @@ class Note : Serializable {
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
 
+    fun getId(): String{
+        return id.toString()
+    }
+
+    fun setId(setId: Int){
+        id = setId.toLong()
+    }
+
     var timestamp: Long = 0
-        private set
+        //private set
 
     constructor(id: Long, title: String, content: String) {
         this.title = title
@@ -54,9 +62,9 @@ class Note : Serializable {
         this.timestamp = System.currentTimeMillis()
     }
 
-    constructor(id: Long) {
+    /*constructor(id: Long) {
         this.id = id
-    }
+    }*/
 
     constructor(jsonObject: JSONObject, name: String) {
         this.id = name.toLongOrNull() ?: 0
