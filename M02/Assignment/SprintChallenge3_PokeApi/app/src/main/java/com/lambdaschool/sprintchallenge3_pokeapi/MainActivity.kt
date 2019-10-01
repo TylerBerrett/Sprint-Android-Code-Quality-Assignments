@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(context, PokemonDetailsActivity::class.java)
             intent.putExtra("Search_Parameter", name)
             startActivityForResult(intent, 0)
+            names_list_layout?.removeView(view)
         }
         view.setOnLongClickListener { clickedView ->
             names_list_layout?.removeView(clickedView)
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         if (resultCode == Activity.RESULT_OK) {
             when (requestCode) {
                 0 -> {
-                    val pokemon = data!!.getSerializableExtra("pokemon") as Pokemon
+                    val pokemon = data!!.getSerializableExtra("pokemon") as PassPokemon
                     names_list_layout?.addView(buildTextView(pokemon.name))
                 }
             }
