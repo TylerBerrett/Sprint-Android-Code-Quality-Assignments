@@ -1,5 +1,6 @@
 package com.lambdaschool.sprintchallenge3_pokeapi
 
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.json.JSONException
@@ -21,6 +22,7 @@ object PokemonDao {
         val logger = HttpLoggingInterceptor()
 
         val okHttp = OkHttpClient.Builder()
+                .addNetworkInterceptor(StethoInterceptor())
                 .addInterceptor(logger)
                 .retryOnConnectionFailure(false)
                 .readTimeout(10, TimeUnit.SECONDS)
