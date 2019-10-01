@@ -6,7 +6,7 @@ import org.json.JSONObject
 object PokemonDao {
     private val POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/%s/" // add pokemon name as
 
-    fun getPokemon(name: String): Pokemon {
+    fun getPokemon(name: String):  Pokemon {
         var pokemon: Pokemon
         try {
             pokemon = Pokemon(JSONObject(NetworkAdapter.httpRequest(String.format(POKEMON_URL, name), "GET")))
