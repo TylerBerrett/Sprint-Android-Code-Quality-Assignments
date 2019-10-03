@@ -27,11 +27,35 @@ class ShouldAddToUI {
 
     @Test
     fun testSquares(){
-        onView(withId(R.id.et_squares_one)).perform(typeText("3"))
-        onView(withId(R.id.et_squares_two)).perform(typeText("3"))
+        val num1 = 3L
+        val num2 = 3L
+        onView(withId(R.id.et_squares_one)).perform(typeText(num1.toString()))
+        onView(withId(R.id.et_squares_two)).perform(typeText(num2.toString()))
 
         onView(withId(R.id.button_squares_add)).perform(click())
 
-        onView(withId(R.id.tv_squares)).check(matches(withText("18")))
+        onView(withId(R.id.tv_squares)).check(matches(withText(Math().sumOfSquares(num1, num2).toString())))
+    }
+
+    @Test
+    fun testDifference(){
+        val num1 = 3L
+        val num2 = 3L
+        onView(withId(R.id.et_difference_one)).perform(typeText(num1.toString()))
+        onView(withId(R.id.et_difference_two)).perform(typeText(num2.toString()))
+
+        onView(withId(R.id.button_difference_add)).perform(click())
+
+        onView(withId(R.id.tv_difference)).check(matches(withText(Math().absoluteDifference(num1, num2).toString())))
+    }
+
+    @Test
+    fun prime(){
+        val num = 11L
+        onView(withId(R.id.et_prime)).perform(typeText(num.toString()))
+
+        onView(withId(R.id.button_prime)).perform(click())
+
+        onView(withId(R.id.tv_prime)).check(matches(withText("$num is a prime number")))
     }
 }
