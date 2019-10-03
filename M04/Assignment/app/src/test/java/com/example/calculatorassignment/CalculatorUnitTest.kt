@@ -21,7 +21,7 @@ class CalculatorUnitTest {
 
         `when` (math.sumOfSquares(num1, num2)).thenReturn(expected)
 
-        val sumOfSquares = calculator.factorial(num1, num2)
+        val sumOfSquares = calculator.sumSquares(num1, num2)
 
         assertEquals(expected, sumOfSquares)
     }

@@ -28,12 +28,16 @@ class Math{
 
 class Calculator(private val math: Math) {
 
-    fun factorial(num1: Long, num2: Long): Long{
+    fun sumSquares(num1: Long, num2: Long): Long{
         return math.sumOfSquares(num1, num2)
     }
 
     fun difference(num1: Long, num2: Long): Long{
         return math.absoluteDifference(num1, num2)
+    }
+
+    fun isPrime(num: Long): Boolean{
+        return math.primeNumber(num)
     }
 
 
