@@ -3,6 +3,7 @@ package com.lambdaschool.notetaker
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.lambdaschool.notetakerroom.NotesDbContract
 
 class NotesDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 

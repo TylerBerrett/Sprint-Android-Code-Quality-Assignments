@@ -16,7 +16,9 @@ import android.preference.PreferenceManager
 import android.preference.RingtonePreference
 import android.text.TextUtils
 import android.view.MenuItem
+import com.lambdaschool.notetakerroom.AppCompatPreferenceActivity
 import com.lambdaschool.notetakerroom.R
+import com.lambdaschool.notetakerroom.ThemeUtils
 
 /**
  * A [PreferenceActivity] that presents a set of application settings. On
